@@ -68,7 +68,7 @@ def segmentation():
     creditcard_df.loc[(creditcard_df['CREDIT_LIMIT'].isnull() == True), 'CREDIT_LIMIT'] = creditcard_df[
         'CREDIT_LIMIT'].mean()
     # Let's drop Customer ID since it has no meaning here
-    creditcard_df.drop("CUST_ID", axis=1, inplace=True)
+    creditcard_df.drop(["CUST_ID","Recnum"], axis=1, inplace=True)
 
     st.markdown('### Let us now group customers based on some common factors')
     # Let's scale the data first
