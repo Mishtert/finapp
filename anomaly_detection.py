@@ -10,8 +10,6 @@ import matplotlib.pyplot as plt
 
 url = 'https://github.com/Mishtert/cardtransactiondata/blob/main/card%20transactions.csv?raw=true'
 data = pd.read_csv(url, index_col=0)
-st.dataframe(data.head(2))
-# data = pd.read_csv(url)
 df = data.reset_index()
 df = df.dropna(axis=1, how='all')
 df['first_digit'] = df['Amount'].multiply(100).apply(lambda row: str(row)[0])
