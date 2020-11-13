@@ -8,7 +8,9 @@ from sklearn.cluster import KMeans
 
 url = "https://github.com/Mishtert/bankcxsegmentation/blob/main/CC%20GENERAL.csv?raw=true"
 creditcard_df = pd.read_csv(url, index_col=0)
+st.dataframe(creditcard_df.head(2))
 creditcard_df = creditcard_df.reset_index()
+st.dataframe(creditcard_df.head(2))
 
 
 def segmentation():
