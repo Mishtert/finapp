@@ -16,7 +16,14 @@ st.dataframe(creditcard_df.head(2))
 def segmentation():
     st.subheader('Customer Segmentation(Credit Card Transactions)')
     st.markdown('### About data')
-    st.dataframe(creditcard_df.head())
+    
+    url = "https://github.com/Mishtert/bankcxsegmentation/blob/main/CC%20GENERAL.csv?raw=true"
+    creditcard_df = pd.read_csv(url, index_col=0)
+    st.dataframe(creditcard_df.head(2))
+    creditcard_df = creditcard_df.reset_index()
+    st.dataframe(creditcard_df.head(2))
+
+#     st.dataframe(creditcard_df.head())
     st.write('1. **CUSTID:** Identification of Credit Card holder \n')
     st.write('2. **BALANCE:** Balance amount left in customers account to make purchases \n')
     st.write(
