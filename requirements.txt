@@ -61,7 +61,7 @@ nbformat==5.0.8
 nest-asyncio==1.4.2
 netCDF4==1.5.4
 nltk==3.5
-notebook==6.1.4
+notebook==6.1.5
 numpy==1.19.4
 osqp==0.6.1
 packaging==20.4
